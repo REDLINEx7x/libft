@@ -6,11 +6,11 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 16:07:54 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/10/19 16:24:07 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/10/21 18:33:41 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 void *ft_calloc(size_t count, size_t size)
 {
     unsigned char   *tempo;
@@ -23,5 +23,5 @@ void *ft_calloc(size_t count, size_t size)
         tempo[i] = 0;
         i++;
     }
-    return (tempo)
+    return (tempo);
 }

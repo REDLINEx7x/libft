@@ -6,11 +6,11 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 22:37:06 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/10/18 14:51:54 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/10/21 18:32:55 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 char *ft_strrchr(const char *s, int c)
 {
 	int	i;

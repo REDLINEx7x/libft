@@ -6,11 +6,12 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 15:42:49 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/10/19 16:00:33 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/10/22 09:51:57 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_spaces(char c)
+#include "libft.h"
+static ft_spaces(char c)
 {
     if(c == '\t' || c == '\n' || c == '\v' 
         || c == ' ' || c == '\r' || c == '\f')
@@ -20,10 +21,10 @@ int ft_spaces(char c)
         return (0);
 }
 
-int atoi(const char *str)
+int ft_atoi(const char *str)
 {
     int i;
-    int result;
+    long long int result;
     int sign;
     
     i = 0;
@@ -46,12 +47,11 @@ int atoi(const char *str)
         result = result * 10 + (str[i] - 48);
         i++;
     }
-    if(result > LLONG_MAX \ 10 || result == LLONG_MAX / 10)
-    {
-        if(sing = 1)
-            return (-1)
-        else
-            return (0)
-    }
+    // // if
+    // {
+    //     if(sign = 1)
+    //         return (-1)
+    //     else
+    //         return (0)
     return (result * sign);
 }

@@ -1,43 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/17 21:17:28 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/10/21 18:34:55 by moamhouc         ###   ########.fr       */
+/*   Created: 2025/10/22 14:20:07 by moamhouc          #+#    #+#             */
+/*   Updated: 2025/10/23 10:26:27 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-char *ft_strchr(const char *s, int c)
+
+char *ft_substr(const char *s, unsigned int start, size_t len)
 {
-    char    hold;
-    int     i;
+    int    i;
+    char    *sub_str;
+    int s_len;
     
     i = 0;
-    hold = c;
-    if(s == NULL)
+    s_len = ft_strlen(s);
+    if(!s)
         return (NULL);
-    while (s[i])
+    if(s_len <= start)
+        return (ft_strdup(""));
+    sub_str = (char *) malloc(1 * len + 1);
+    if (!sub_str)
+        return (NULL);
+    while (start < len)
     {
-        if(s[i] == hold)
-        {
-            return ((char *)s + i);
-        }
+        sub_str[i] = s[start];
         i++;
+        start++;
     }
-    if (s[i] == hold)
-    {
-        return((char *)s + i);
-    }
-    return (NULL);
+    return (sub_str);
 }
+
 #include <stdio.h>
 
-int main()
+int main ()
 {
-    char str[] = "hannibal";
-    printf("%s", ft_strchr(str, 'n'));
+    char str[] = "dont drink and drive but if u did call me";
+    printf("%s", ft_substr(str, 6, 10));
 }

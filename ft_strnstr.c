@@ -6,11 +6,11 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 16:10:36 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/10/20 18:31:31 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/10/21 18:33:24 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
+#include "libft.h"
 char *ft_strnst(const char *haystack, const char *needle, size_t len)
 {
     size_t  i;
@@ -30,7 +30,7 @@ char *ft_strnst(const char *haystack, const char *needle, size_t len)
             j++;
             if(needle[j + 1] == '0')
             {
-                return ((char *)&haystack[i])
+                return ((char *)&haystack[i]);
             }
         }
         i++;

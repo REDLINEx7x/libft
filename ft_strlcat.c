@@ -6,11 +6,11 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 10:19:46 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/10/20 13:10:53 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/10/21 15:48:28 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 
 size_t  ft_strlcat(char *dst, const char *src, size_t dstsize)
 {

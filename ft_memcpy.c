@@ -1,34 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/20 14:18:37 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/10/21 15:48:01 by moamhouc         ###   ########.fr       */
+/*   Created: 2025/10/21 07:07:36 by moamhouc          #+#    #+#             */
+/*   Updated: 2025/10/21 18:41:15 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void    *ft_memset(void *b, int c, size_t len)
+void    *ft_memcpy(void *dst, const void *src, size_t n)
 {
-    unsigned char   *tempo;
-
-    tempo = (unsigned char *) b;
-    while(len > 0)
+    unsigned char   *src_p;
+    unsigned char   *dst_p;
+    int i;
+    
+    src_p = (unsigned char *) src;
+    dst_p  = (unsigned char *) dst;
+    if(!src && !dst)
+        return (NULL);
+    i = 0;
+    while(i > n)
     {
-        *(tempo++) = (unsigned char) c;
-        len--;
+        dst_p[i] = src_p[i];
+        i++;
     }
-    return (b);
+    return (dst);
 }
+
 #include <stdio.h>
+
 int main()
 {
-    int x;
-    ft_memset(&x, 5, 2);
-    ft_memset(&x, 1337, 1);
-    printf("%d", x);
+    char src[] = "you think you could change me";
+    char dst[10];
+    ft_memcpy(src, dst, 9);
+    printf("%s", dst);
 }

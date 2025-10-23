@@ -19,6 +19,8 @@ clean:
 	$(RM) $(OBJS)
 
 fclean:
+
+re: all clean
 	
 
 
