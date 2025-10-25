@@ -6,12 +6,12 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 15:42:49 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/10/22 09:51:57 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/10/24 21:19:14 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-static ft_spaces(char c)
+static int ft_spaces(char c)
 {
     if(c == '\t' || c == '\n' || c == '\v' 
         || c == ' ' || c == '\r' || c == '\f')

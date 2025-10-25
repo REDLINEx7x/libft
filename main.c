@@ -1,28 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/19 16:07:54 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/10/25 18:39:38 by moamhouc         ###   ########.fr       */
+/*   Created: 2025/10/24 21:27:17 by moamhouc          #+#    #+#             */
+/*   Updated: 2025/10/24 21:29:09 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-void *ft_calloc(size_t count, size_t size)
-{
-    unsigned char   *tempo;
-    size_t  i;
-    tempo = malloc(count * size);
-    
-    if(!tempo)
-        return (NULL);
-    while(i < count * size)
-    {
-        tempo[i] = 0;
-        i++;
-    }
-    return (tempo);
+
+int main(){
+    size_t len = ft_strlen("mohamed");
+    printf("%zu\n", len);
 }

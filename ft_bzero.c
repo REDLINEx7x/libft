@@ -6,7 +6,7 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 21:02:29 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/10/21 15:49:44 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/10/24 21:21:31 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ void    ft_bzero(void *s, size_t n)
 {
     unsigned char *tempo;
 
-    tempo = (char *)s;
+    tempo = (unsigned char *)s;
     
     while(n > 0)
     {

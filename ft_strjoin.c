@@ -1,44 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/19 17:44:48 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/10/23 10:46:32 by moamhouc         ###   ########.fr       */
+/*   Created: 2025/10/23 10:58:47 by moamhouc          #+#    #+#             */
+/*   Updated: 2025/10/23 14:45:37 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-char *ft_strdup(const char *s1)
+char *ft_strjoin(const char *s1, const char *s2)
 {
-    char    *s2;
+    char    *final_str;
     int i;
-    int s1_len;
+    int j;
+    size_t  strs_len;
     
     i = 0;
-    s1_len = 0;
-    while(s1[s1_len])
-    {
-        s1_len++;
-    }
-    s2 = malloc(1 * (s1_len + 1));
-    if(!s2)
-    {
+    j = 0;
+    strs_len = ft_strlen(s1) + ft_strlen(s2);
+    final_str = (char *) malloc(strs_len + 1);
+    if (!final_str)
         return (NULL);
-    }
-    while(s1[i])
+    while (s1[i])
     {
-        s2[i] = s1[i];
+        final_str[j] = s1[i];
         i++;
+        j++;
     }
-    s2[i] = '\0';
-    return (s2);
+    i = 0;
+    while (s2[i])
+    {
+        final_str[j] = s2[i];
+        i++;
+        j++;
+    }
+    
+    final_str[j] = '\0';
+    return (final_str);
 }
-// #include <stdio.h>
 
-// int main()
-// {
-//     char *str[] = "mohamed";
-// }
+int main()
+{
+    printf("%s", ft_strjoin("", ""));
+    
+}

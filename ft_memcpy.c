@@ -6,7 +6,7 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 07:07:36 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/10/21 18:41:15 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/10/24 21:19:49 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ void    *ft_memcpy(void *dst, const void *src, size_t n)
 {
     unsigned char   *src_p;
     unsigned char   *dst_p;
-    int i;
+    size_t i;
     
     src_p = (unsigned char *) src;
     dst_p  = (unsigned char *) dst;
