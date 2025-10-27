@@ -6,7 +6,7 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 15:42:49 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/10/24 21:19:14 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/10/27 18:24:47 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static int ft_spaces(char c)
 int ft_atoi(const char *str)
 {
     int i;
-    long long int result;
+    int result;
     int sign;
     
     i = 0;
@@ -47,11 +47,5 @@ int ft_atoi(const char *str)
         result = result * 10 + (str[i] - 48);
         i++;
     }
-    // // if
-    // {
-    //     if(sign = 1)
-    //         return (-1)
-    //     else
-    //         return (0)
     return (result * sign);
 }

@@ -6,31 +6,30 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 16:10:36 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/10/24 21:24:27 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/10/27 15:47:45 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-char *ft_strnstr(const char *haystack, const char *needle, size_t len)
+#include <string.h>
+
+char    *ft_strnstr(const char *big, const char *little, size_t len)
 {
     size_t  i;
     size_t  j;
     
     i = 0;
-    
-    // if(!needle)
-    // {
-    //     return(haystack);
-    // }
-    while(haystack[i] && i < len)
+    if(little[0] == '\0')
+        return ((char*)big);
+    while(big[i] && i < len)
     {
         j = 0;
-        while(haystack[i + j] == needle[j] && i + j < len)
+        while(little[j] && big[i + j] == little[j] && i + j < len)
         {
             j++;
-            if(needle[j + 1] == '0')
+            if(little[j] == '\0')
             {
-                return ((char *)&haystack[i]);
+                return ((char *) big + i);
             }
         }
         i++;
@@ -42,6 +41,6 @@ char *ft_strnstr(const char *haystack, const char *needle, size_t len)
 int main()
 {
     char hay[] = "the one who runs the world";
-    char nee[] = "one";
-    printf("%s", ft_strnstr(hay, nee, 5));
+    char nee[] = "";
+    printf("%s", ft_strnstr(hay, nee, 7));
 }

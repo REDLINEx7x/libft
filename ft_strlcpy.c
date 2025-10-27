@@ -6,7 +6,7 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 22:20:20 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/10/21 18:40:22 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/10/27 16:53:57 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,5 @@ int main ()
     char src[] = "mohamed";
     char dst[5];
     ft_strlcpy(dst, src, 5);
-    printf("%s", dst);
-        
+    printf("%s", dst);     
 }

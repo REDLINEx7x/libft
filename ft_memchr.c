@@ -1,28 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/19 16:07:54 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/10/27 18:25:23 by moamhouc         ###   ########.fr       */
+/*   Created: 2025/10/27 14:56:34 by moamhouc          #+#    #+#             */
+/*   Updated: 2025/10/27 14:57:18 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-void *ft_calloc(size_t count, size_t size)
-{
-    unsigned char   *tempo;
-    size_t  i;
-    
-    tempo = malloc(count * size);
-    if(!tempo)
-        return (NULL);
-    while(i < count * size)
-    {
-        tempo[i] = 0;
-        i++;
-    }
-    return (tempo);
-}
+void *memchr(const void *s, int c, size_t n)
