@@ -6,7 +6,7 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 09:31:43 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/10/21 15:47:55 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/10/28 18:40:17 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,7 @@ void    *ft_memmove(void *dst, const void *src, size_t len)
 {
     unsigned char   *src_p;
     unsigned char   *dst_p;
-    int i;
     
-    i = 0;
     src_p = (unsigned char *) src;
     dst_p = (unsigned char *) dst;
     
@@ -28,6 +26,5 @@ void    *ft_memmove(void *dst, const void *src, size_t len)
         dst_p[len] = src_p[len];
         len--;
     }
-    return(dst);
-    
+    return(dst);  
 }

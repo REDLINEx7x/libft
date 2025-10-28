@@ -6,12 +6,12 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 08:55:20 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/10/24 21:11:33 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/10/28 09:52:51 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-int checkset(const char *set, char c)
+static int checkset(const char *set, char c)
 {
     int i;
     

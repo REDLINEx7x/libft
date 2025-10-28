@@ -1,26 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/17 15:08:35 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/10/28 18:41:33 by moamhouc         ###   ########.fr       */
+/*   Created: 2025/10/28 17:20:56 by moamhouc          #+#    #+#             */
+/*   Updated: 2025/10/28 18:07:28 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-int strncmp(const char *s1, const char *s2, size_t n)
+int ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-    size_t  i;
+    unsigned char *p1;
+    unsigned char *p2;
 
-    i = 0;
-    while(s1[i] && s2[i] && i < n)
+    p1 = (unsigned char *) s1;
+    p2 = (unsigned char *) s2;
+    while (n > 0)
     {
-        if(s1[i] != s2[i])
-            return (s1[i] - s2[i]);
-        i++;
+        if (*p1 != *p2)
+            return(*p1 - *p2);
+        p1++;
+        p2++;
+        n--;
     }
-    return (s1[i] - s2[i]);
+    return (0);
+}
+int main()
+{
+    char *src;
+    char dst[] = "you thinb you could change me";
+    printf("%d\n", ft_memcmp(src, dst, 15));
 }
