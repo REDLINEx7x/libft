@@ -6,13 +6,13 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 18:21:31 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/10/28 18:43:15 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/10/29 18:35:19 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isdigit(int c)
 {
-    if (c >= 48 && c <= 57)
-        return (1);
-    return (0);
+	if (c >= 48 && c <= 57)
+		return (1);
+	return (0);
 }

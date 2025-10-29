@@ -6,13 +6,13 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 18:42:18 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/10/28 18:42:55 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/10/29 18:34:05 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii(int c)
+int	ft_isascii(int c)
 {
-    if(c >= 0 && c <= 127)
-        return (1);
-    return (0);
+	if (c >= 0 && c <= 127)
+		return (1);
+	return (0);
 }

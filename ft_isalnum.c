@@ -6,14 +6,14 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 18:42:24 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/10/28 18:42:20 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/10/29 18:31:37 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalnum(int c)
+int	ft_isalnum(int c)
 {
-     if ((c >= 48 && c <= 57) || (c >= 64 && c <= 90) 
-            || (c >= 97 && c <= 122))
-        return (1);
-     return (0);
+	if ((c >= 48 && c <= 57) || (c >= 64 && c <= 90)
+		|| (c >= 97 && c <= 122))
+		return (1);
+	return (0);
 }

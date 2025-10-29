@@ -6,13 +6,13 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 18:55:33 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/10/28 18:43:37 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/10/29 18:36:05 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
-    if(c >= 32 && c <= 126)
-        return (1);
-    return (0);
+	if (c >= 32 && c <= 126)
+		return (1);
+	return (0);
 }
