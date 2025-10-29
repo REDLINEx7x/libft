@@ -6,13 +6,13 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 09:13:41 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/10/28 20:00:56 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/10/29 09:25:34 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	count_words(char *s, char c)
+int	count_words(const char *s, char c)
 {
     int	i;
     int	word;
@@ -29,7 +29,21 @@ int	count_words(char *s, char c)
     }
     return(word);
 }
-char	**catch_word(char *s, char **splits, char c)
+
+void	free_arr(char **arr)
+{
+	int	i;
+
+	i = 0;
+	while(arr[i])
+	{
+		free(arr[i]);
+		i++;
+	}
+	free(arr);
+}
+
+char	**catch_word(const char *s, char **splits, char c)
 {
     int	i;
 	int	tmp;
@@ -45,16 +59,20 @@ char	**catch_word(char *s, char **splits, char c)
 		if(s[i])
 		{
 			tmp = i;
-			while(s[i] != c && s[i])
+			while(s[i] && s[i] != c)
 				i++;
-			splits[j] = substr(s, tmp, (i - tmp));		
+			splits[j] = ft_substr(s, tmp, (i - tmp));
+			if(!splits[j])
+			{
+				free_arr(splits);
+				return (NULL);
+			}
+			j++;
 		}
 	}
 	splits[j] = NULL;
 	return(splits);
 }
-
-void	free_arr()
 
 char	**ft_split(char const *s, char c)
 {
@@ -62,20 +80,27 @@ char	**ft_split(char const *s, char c)
     int arr_len;
 	char	**splits;
 
-	if (s == NULL)
+	if (!s)
 		return (NULL);
 		
 	i = 0;
 	arr_len = count_words(s, c);
-	splits = malloc(arr_len + 1 * sizeof(char*));
+	splits = malloc((arr_len + 1 )* sizeof(char*));
+	if(!splits)
+		return (NULL);
 	splits = catch_word(s, splits, c);
-}
+	return (splits);
 
+}
 
 int main()
 {
-    char str[] = "i   think  it's   time for you to start to seriously.";
-    printf("%d", ft_split(str, ' '));
-    
-    
+    char str[] = "i   think  it's   time for you to start seriously.";
+	int i = 0;
+    char **arr = ft_split(str, ' ');
+	while(arr[i])
+	{
+		printf("%s\n", arr[i]);
+		i++;
+	}
 }
