@@ -6,17 +6,20 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 19:06:19 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/10/23 07:21:18 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/10/30 09:57:06 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-size_t  ft_strlen(const char *s)
+
+size_t	ft_strlen(const char *s)
 {
-    if (s == NULL)
-        return (0);
-    size_t i = 0;
-    while (s[i])
-        i++;
-    return (i);
+	size_t	i;
+
+	if (s == NULL)
+		return (0);
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
 }

@@ -6,39 +6,37 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 22:37:06 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/10/24 21:26:51 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/10/30 10:34:25 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-char *ft_strrchr(const char *s, int c)
+
+char	*ft_strrchr(const char *s, int c)
 {
-	int	i;
+	int		i;
 	char	hold;
-	
+
 	i = 0;
 	hold = c;
-	if(!s)
+	if (!s)
 		return (NULL);
-	while(s[i])
+	while (s[i])
 		i++;
-		
 	while (i >= 0)
 	{
-		if(s[i] == hold)
+		if (s[i] == hold)
 		{
-			return((char *)s + i);
+			return ((char *)s + i);
 		}
 		i--;
 	}
-	return(NULL);
+	return (NULL);
 }
 
-#include <stdio.h>
-
-int main()
-{
-    printf("%s\n", ft_strrchr("hello", 'l')); 
-	printf("%s\n", ft_strrchr("hello", 'h'));     
-	printf("%s\n", ft_strrchr("hello", 'o'));
-}
+// int	main(void)
+// {
+// 	printf("%s\n", ft_strrchr("hello", 'l'));
+// 	printf("%s\n", ft_strrchr("hello", 'h'));
+// 	printf("%s\n", ft_strrchr("hello", 'o'));
+// }

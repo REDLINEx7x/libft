@@ -14,8 +14,8 @@
 
 static int	ft_spaces(char c)
 {
-	if (c == '\t' || c == '\n' || c == '\v'
-		|| c == ' ' || c == '\r' || c == '\f')
+	if (c == '\t' || c == '\n' || c == '\v' || c == ' ' || c == '\r'
+		|| c == '\f')
 		return (1);
 	return (0);
 }

@@ -58,7 +58,7 @@ static void	calcul(char *str, long n, int nb)
 char	*ft_itoa(int n)
 {
 	long	ng;
-	int	nb;
+	int		nb;
 	char	*cnv_str;
 
 	ng = n;

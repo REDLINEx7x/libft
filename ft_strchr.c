@@ -6,38 +6,38 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 21:17:28 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/10/21 18:34:55 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/10/30 10:33:30 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-char *ft_strchr(const char *s, int c)
-{
-    char    hold;
-    int     i;
-    
-    i = 0;
-    hold = c;
-    if(s == NULL)
-        return (NULL);
-    while (s[i])
-    {
-        if(s[i] == hold)
-        {
-            return ((char *)s + i);
-        }
-        i++;
-    }
-    if (s[i] == hold)
-    {
-        return((char *)s + i);
-    }
-    return (NULL);
-}
-#include <stdio.h>
 
-int main()
+char	*ft_strchr(const char *s, int c)
 {
-    char str[] = "hannibal";
-    printf("%s", ft_strchr(str, 'n'));
+	char	hold;
+	int		i;
+
+	i = 0;
+	hold = c;
+	if (s == NULL)
+		return (NULL);
+	while (s[i])
+	{
+		if (s[i] == hold)
+		{
+			return ((char *)s + i);
+		}
+		i++;
+	}
+	if (s[i] == hold)
+	{
+		return ((char *)s + i);
+	}
+	return (NULL);
 }
+
+// int	main(void)
+// {
+// 	char str[] = "hannibal";
+// 	printf("%s", ft_strchr(str, 'n'));
+// }
