@@ -6,7 +6,7 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 20:59:09 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/10/30 11:05:39 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/11/01 14:38:07 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,5 +57,6 @@ void				ft_putstr_fd(char *s, int fd);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 char				*ft_strtrim(const char *s1, const char *set);
 char				*ft_strjoin(const char *s1, const char *s2);
+t_list				*ft_lstnew(void *content);
 
 #endif
