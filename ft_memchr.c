@@ -6,7 +6,7 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 14:56:34 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/10/30 10:21:12 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/11/04 17:08:52 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,8 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	char	*ptr;
-	char	c_p;
-	int		i;
+	unsigned char	*ptr;
+	size_t	i;
 
 	ptr = (unsigned char *)s;
 	i = 0;

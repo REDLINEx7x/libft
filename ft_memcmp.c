@@ -6,7 +6,7 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 17:20:56 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/10/30 10:22:09 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/11/04 15:34:29 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 }
 // int	main(void)
 // {
-// 	char *src;
-// 	char dst[] = "you thinb you could change me";
-// 	printf("%d\n", ft_memcmp(src, dst, 15));
+// 	char src[] = "";
+// 	char dst[] = "";
+// 	printf("%d\n", ft_memcmp(src, dst, 10));
 // }

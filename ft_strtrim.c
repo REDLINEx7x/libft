@@ -6,7 +6,7 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 08:55:20 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/10/30 10:19:46 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/11/04 17:12:57 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,18 +33,18 @@ char	*ft_strtrim(const char *s1, const char *set)
 	int		j;
 	int		len;
 
-	if (s1 == 0 || set == 0)
+	if (!s1)
 		return (NULL);
+	if (!set)
+		return (ft_strdup(s1));
+
 	i = 0;
 	while (s1[i] && checkset(set, s1[i]))
 		i++;
-	j = ft_strlen(s1) - 1;
-	while (j >= i && checkset(set, s1[j]))
+	j = ft_strlen(s1);
+	while (j > i && checkset(set, s1[j - 1]))
 		j--;
-	len = (j - i) + 1;
-	result = (char *)malloc(len + 1);
-	if (!result)
-		return (NULL);
+	len = j - i;
 	result = ft_substr(s1, i, len);
 	return (result);
 }
@@ -55,4 +55,27 @@ char	*ft_strtrim(const char *s1, const char *set)
 // 	char const *set = " ";
 // 	printf("%s\n", ft_strtrim(s1, set));
 // 	return (0);
+// 	free(ft_strtrim(s1, set));
+
+// #include <stdio.h>
+
+// int main(void)
+// {
+//     char *s;
+
+//     s = ft_strtrim("  hello  ", " ");
+//     printf("'%s'\n", s); // 'hello'
+//     free(s);
+
+//     s = ft_strtrim("--abc--", "-");
+//     printf("'%s'\n", s); // 'abc'
+//     free(s);
+
+//     s = ft_strtrim("xxx", "x");
+//     printf("'%s'\n", s); // ''
+//     free(s);
+
+//     s = ft_strtrim("", " ");
+//     printf("'%s'\n", s); // ''
+//     free(s);
 // }

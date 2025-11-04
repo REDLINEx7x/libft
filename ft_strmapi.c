@@ -6,7 +6,7 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 10:46:18 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/10/27 09:07:10 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/11/04 18:21:57 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,20 +34,20 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 	return (str);
 }
 
-char	to_uppercase(unsigned int i, char c)
-{
-	(void)i;
-	return (ft_toupper(c));
-}
+// char	to_uppercase(unsigned int i, char c)
+// {
+// 	(void)i;
+// 	return (ft_toupper(c));
+// }
 
-int	main(void)
-{
-	char	*result;
+// int	main(void)
+// {
+// 	char	*result;
 
-	result = ft_strmapi("hello world", to_uppercase);
-	printf("%s\n", result);
-	free(result);
-}
+// 	result = ft_strmapi("hello world", to_uppercase);
+// 	printf("%s\n", result);
+// 	free(result);
+// }
 
 // return_type (*pointer_name)(parameter_types);
 

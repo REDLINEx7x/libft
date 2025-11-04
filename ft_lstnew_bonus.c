@@ -14,18 +14,19 @@
 
 t_list	*ft_lstnew(void *content)
 {
-    t_list	*new;
+	t_list	*new;
+
 	new = malloc(sizeof(t_list));
-	if(!new)
+	if (!new)
 	{
 		free(new);
 		return (NULL);
 	}
-	new -> next = NULL;
-	new -> content = content;
+	new->next = NULL;
+	new->content = content;
 	return (new);
 }
-// int main() 
+// int main()
 // {
 // 	int a = 97;
 // 	t_list *node = ft_lstnew(&a);
