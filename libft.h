@@ -6,7 +6,7 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/29 20:59:09 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/11/04 18:22:23 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/11/05 12:15:48 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
-#include <stdint.h>
+# include <stdint.h>
 
 typedef struct s_list
 {
@@ -35,15 +35,15 @@ int					ft_tolower(int c);
 int					ft_atoi(const char *str);
 char				*ft_itoa(int n);
 size_t				ft_strlen(const char *str);
-size_t				ft_strlcpy(char *dst, const char *src, size_t dstsize);
-size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);
+size_t				ft_strlcpy(char *dst, const char *src, size_t size);
+size_t				ft_strlcat(char *dst, const char *src, size_t size);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 void				*ft_calloc(size_t nmemb, size_t size);
 void				ft_bzero(void *s, size_t n);
 char				*ft_strchr(const char *s, int c);
+char				*ft_strrchr(const char *s, int c);
 char				*ft_strdup(const char *s);
 char				**ft_split(char const *s, char c);
-char				*ft_strnstr(const char *big, const char *little, size_t len);
 void				*ft_memset(void *b, int c, size_t len);
 void				*ft_memchr(const void *s, int c, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
@@ -66,5 +66,6 @@ void				ft_lstadd_front(t_list **lst, t_list *new);
 void				ft_lstclear(t_list **lst, void (*del)(void *));
 t_list				*ft_lstlast(t_list *lst);
 int					ft_lstsize(t_list *lst);
-
+char				*ft_strnstr(const char *big, const char *little,
+						size_t len);
 #endif

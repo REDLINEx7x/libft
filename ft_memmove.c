@@ -6,7 +6,7 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 09:31:43 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/11/04 10:18:04 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/11/05 10:25:58 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,10 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	return (dest);
 }
 
-int main(void)
-{
-	char str[] = "hello";
-	ft_memmove(str + 2, str, 3);
-	printf("%s",str);
-}
+// int main(void)
+// {
+// 	char str[] = "hello";
+// 	ft_memmove(str + 2, str, 3);
+// 	printf("%s",str);
+// }
 
