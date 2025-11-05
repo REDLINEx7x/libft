@@ -12,7 +12,9 @@ ft_putnbr_fd.c ft_striteri.c ft_strmapi.c ft_substr.c ft_isascii.c
 BONUS = ft_lstadd_back_bonus.c ft_lstadd_front_bonus.c ft_lstclear_bonus.c \
 ft_lstdelone_bonus.c ft_lstlast_bonus.c ft_lstnew_bonus.c ft_lstsize_bonus.c
 
-OBJS = $(SRCS:.c=.o) $(BONUS:.c=.o)
+OBJS = $(SRCS:.c=.o)
+
+BOBJS = $(BONUS:.c=.o)
 
 RM = rm -rf
 AR = ar rcs
@@ -25,12 +27,15 @@ $(NAME): $(OBJS)
 
 all: $(NAME)
 
+bonus: $(BOBJS) $(OBJS)
+	$(AR) $(NAME) $(BOBJS)
+
 clean:
-	$(RM) $(OBJS)
+	$(RM) $(OBJS) $(BOBJS)
 
 fclean: clean
 	$(RM) $(NAME)
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all bonus clean fclean re
