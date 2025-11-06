@@ -6,7 +6,7 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/02 10:14:47 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/11/02 15:58:28 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/11/06 15:57:24 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,13 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	t_list	*tmp;
-
 	if (!lst)
 		return (NULL);
-	tmp = lst;
-	while (tmp->next)
-		tmp = tmp->next;
-	return (tmp);
+	while (lst -> next)
+		lst = lst->next;
+	return (lst);
 }
-// int	main(void)
+// int	main()
 // {
 // 	int x = 9;
 // 	int n = 8;

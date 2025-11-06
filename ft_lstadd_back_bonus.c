@@ -6,7 +6,7 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 17:04:43 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/11/02 15:54:33 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/11/06 15:57:48 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,13 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 
 	if (!lst || !new)
 		return ;
+	if (*lst == NULL)
+	{
+		*lst = new;
+		return ;
+	}
 	tmp = *lst;
-	while (tmp->next != NULL)
+	while (tmp -> next)
 		tmp = tmp->next;
 	tmp->next = new;
 }

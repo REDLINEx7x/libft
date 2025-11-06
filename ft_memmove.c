@@ -42,4 +42,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 // 	ft_memmove(str + 2, str, 3);
 // 	printf("%s",str);
 // }
-

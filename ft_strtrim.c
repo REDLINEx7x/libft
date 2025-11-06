@@ -37,7 +37,6 @@ char	*ft_strtrim(const char *s1, const char *set)
 		return (NULL);
 	if (!set)
 		return (ft_strdup(s1));
-
 	i = 0;
 	while (s1[i] && checkset(set, s1[i]))
 		i++;

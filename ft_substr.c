@@ -6,7 +6,7 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 14:20:07 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/11/04 17:46:39 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/11/06 13:09:46 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	s_len = ft_strlen(s);
 	if (s_len <= start)
 		return (ft_strdup(""));
+	if (len > s_len - start)
+		len = s_len - start;
 	sub_str = (char *)malloc(len + 1);
 	if (!sub_str)
 		return (NULL);
@@ -43,6 +45,6 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 // {
 //     // char str[] = "dont drink and drive but if u did call me";
 //     // printf("%s", ft_substr(str, 6, 10));
-//     printf("%s", ft_substr("Bonjour comment ca va?", 5, 8));
+//     printf("%s", ft_substr("Bonjour comment ca va?", 5, 233));
 
 // }
