@@ -6,7 +6,7 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 10:58:47 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/10/30 10:14:53 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/11/11 09:45:48 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,3 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	final_str[j] = '\0';
 	return (final_str);
 }
-
-// int main()
-// {
-//     printf("%s", ft_strjoin("", ""));
-
-// }

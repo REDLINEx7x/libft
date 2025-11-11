@@ -6,7 +6,7 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 07:07:36 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/11/04 10:16:39 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/11/11 17:29:47 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned char	*dst_p;
 	size_t			i;
 
-	if (!src && !dest)
-		return (NULL);
 	src_p = (unsigned char *)src;
 	dst_p = (unsigned char *)dest;
 	i = 0;
@@ -30,13 +28,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-// #include <stdio.h>
-
-// int main()
-// {
-//     char src[] = "you think you could change me";
-//     char dst[10];
-//     ft_memcpy(src, dst, 9);
-//     printf("%s", dst);
-// }

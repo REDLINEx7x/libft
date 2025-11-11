@@ -6,7 +6,7 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 08:55:20 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/11/04 17:12:57 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/11/11 09:49:16 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,34 +47,3 @@ char	*ft_strtrim(const char *s1, const char *set)
 	result = ft_substr(s1, i, len);
 	return (result);
 }
-
-// int	main(void)
-// {
-// 	char const *s1 = "   Hello World!   ";
-// 	char const *set = " ";
-// 	printf("%s\n", ft_strtrim(s1, set));
-// 	return (0);
-// 	free(ft_strtrim(s1, set));
-
-// #include <stdio.h>
-
-// int main(void)
-// {
-//     char *s;
-
-//     s = ft_strtrim("  hello  ", " ");
-//     printf("'%s'\n", s); // 'hello'
-//     free(s);
-
-//     s = ft_strtrim("--abc--", "-");
-//     printf("'%s'\n", s); // 'abc'
-//     free(s);
-
-//     s = ft_strtrim("xxx", "x");
-//     printf("'%s'\n", s); // ''
-//     free(s);
-
-//     s = ft_strtrim("", " ");
-//     printf("'%s'\n", s); // ''
-//     free(s);
-// }

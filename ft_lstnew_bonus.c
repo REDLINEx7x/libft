@@ -6,7 +6,7 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/30 15:25:00 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/11/01 15:51:02 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/11/11 15:30:26 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,8 @@ t_list	*ft_lstnew(void *content)
 
 	new = malloc(sizeof(t_list));
 	if (!new)
-	{
-		free(new);
 		return (NULL);
-	}
 	new->next = NULL;
 	new->content = content;
 	return (new);
 }
-// int main()
-// {
-// 	int a = 97;
-// 	t_list *node = ft_lstnew(&a);
-// 	printf("%c\n", *(char *)node -> content);
-// 	free(node);
-// }

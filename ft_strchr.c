@@ -6,7 +6,7 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 21:17:28 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/10/30 10:33:30 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/11/11 09:30:53 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,3 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return (NULL);
 }
-
-// int	main(void)
-// {
-// 	char str[] = "hannibal";
-// 	printf("%s", ft_strchr(str, 'n'));
-// }

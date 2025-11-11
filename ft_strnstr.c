@@ -6,7 +6,7 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 16:10:36 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/10/30 10:19:12 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/11/11 09:34:43 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,10 +36,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (0);
 }
-
-// int	main(void)
-// {
-// 	char hay[] = "the one who runs the world";
-// 	char nee[] = "";
-// 	printf("%s", ft_strnstr(hay, nee, 7));
-// }

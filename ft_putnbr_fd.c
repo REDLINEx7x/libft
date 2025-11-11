@@ -6,7 +6,7 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 11:49:29 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/10/29 18:51:10 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/11/11 09:46:55 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
+	if (fd < 0)
+		return ;
 	if (n == -2147483648)
 	{
 		write(fd, "-2147483648", 11);
@@ -30,8 +32,3 @@ void	ft_putnbr_fd(int n, int fd)
 	}
 	ft_putchar_fd((n % 10) + '0', fd);
 }
-
-//int main()
-//{
-//ft_putnbr_fd(-2147483648, 2);
-//}

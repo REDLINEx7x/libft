@@ -6,7 +6,7 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 14:20:07 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/11/06 13:09:46 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/11/11 09:16:50 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,3 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	sub_str[i] = '\0';
 	return (sub_str);
 }
-
-// #include <stdio.h>
-
-// int main ()
-// {
-//     // char str[] = "dont drink and drive but if u did call me";
-//     // printf("%s", ft_substr(str, 6, 10));
-//     printf("%s", ft_substr("Bonjour comment ca va?", 5, 233));
-
-// }

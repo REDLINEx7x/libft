@@ -6,7 +6,7 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 09:31:43 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/11/05 10:25:58 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/11/11 17:49:07 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char	*src_p;
 	unsigned char	*dst_p;
+	size_t			i;
 
-	if (!src && !dest)
-		return (NULL);
 	src_p = (unsigned char *)src;
 	dst_p = (unsigned char *)dest;
 	if (src_p < dst_p)
@@ -31,14 +30,12 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	else
 	{
-		ft_memcpy(dest, src, n);
+		i = 0;
+		while (i < n)
+		{
+			dst_p[i] = src_p[i];
+			i++;
+		}
 	}
 	return (dest);
 }
-
-// int main(void)
-// {
-// 	char str[] = "hello";
-// 	ft_memmove(str + 2, str, 3);
-// 	printf("%s",str);
-// }

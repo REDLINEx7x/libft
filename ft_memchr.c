@@ -6,7 +6,7 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 14:56:34 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/11/04 17:08:52 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/11/11 15:52:00 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,5 @@ void	*ft_memchr(const void *s, int c, size_t n)
 			return (ptr + i);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
-
-// int	main(void)
-// {
-// 	char src[] = "you think you could change me";
-// 	printf("%s", ft_memchr(src, 'k', 9));
-// }

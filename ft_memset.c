@@ -6,7 +6,7 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 14:18:37 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/11/03 15:16:47 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/11/11 09:30:23 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,3 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
-
-// int	main(void)
-// {
-// 	int x = 25652152; // 1337-
-// 	ft_memset(&x, 5, 2);
-// 	ft_memset(&x, 1337, 1);
-// 	printf("%d", x);
-// }

@@ -6,7 +6,7 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 15:44:29 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/10/30 10:31:02 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/11/11 09:48:28 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putendl_fd(char *s, int fd)
 {
 	int	i;
 
+	if (!s || fd < 0)
+		return ;
 	i = 0;
 	while (s[i])
 	{
@@ -24,19 +26,3 @@ void	ft_putendl_fd(char *s, int fd)
 	}
 	write(fd, "\n", 1);
 }
-
-// int main(void)
-// {
-//     // Test 1: Normal string
-//     ft_putendl_fd("Hello, world!", 1);
-
-//     // Test 2: Empty string
-//     ft_putendl_fd("", 1);
-
-//     // Test 3: Multiple calls
-//     ft_putendl_fd("Line 1", 1);
-//     ft_putendl_fd("Line 2", 1);
-
-//     // Test 4: NULL input (should do nothing, must not crash)
-//     ft_putendl_fd(NULL, 1);
-// }

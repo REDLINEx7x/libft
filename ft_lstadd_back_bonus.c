@@ -6,7 +6,7 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 17:04:43 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/11/06 15:57:48 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/11/11 13:19:44 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,15 +28,3 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		tmp = tmp->next;
 	tmp->next = new;
 }
-// int	main(void)
-// {
-// 	int x = 0;
-// 	t_list *head = NULL;
-// 	t_list *node = ft_lstnew(&x);
-// 	t_list *node2 = ft_lstnew(&x);
-// 	node->next = node2;
-// 	node2->next = NULL;
-// 	head = node;
-// 	t_list *new = ft_lstnew(&x);
-// 	ft_lstadd_back(&head, new);
-// }

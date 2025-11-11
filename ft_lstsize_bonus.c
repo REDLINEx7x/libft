@@ -6,7 +6,7 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/01 17:13:06 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/11/02 15:56:53 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/11/11 09:44:58 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,16 +28,3 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (count);
 }
-// int	main(void)
-// {
-// 	int x = 0;
-// 	t_list *head;
-// 	t_list *node = ft_lstnew(&x);
-// 	t_list *node2 = ft_lstnew(&x);
-// 	t_list *node3 = ft_lstnew(&x);
-// 	node->next = node2;
-// 	node2->next = node3;
-// 	node3->next = NULL;
-// 	head = node;
-// 	printf("%d", ft_lstsize(head));
-// }

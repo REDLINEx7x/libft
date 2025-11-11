@@ -6,7 +6,7 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 17:44:48 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/11/06 14:44:21 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/11/11 09:31:00 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,3 @@ char	*ft_strdup(const char *s1)
 	s2[i] = '\0';
 	return (s2);
 }
-
-// #include <stdio.h>
-
-// int main()
-// {
-//     char *str[] = "mohamed";
-// }
