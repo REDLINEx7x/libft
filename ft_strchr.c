@@ -6,7 +6,7 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 21:17:28 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/11/11 09:30:53 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/11/12 20:50:16 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,10 @@ char	*ft_strchr(const char *s, int c)
 	while (s[i])
 	{
 		if (s[i] == hold)
-		{
 			return ((char *)s + i);
-		}
 		i++;
 	}
 	if (s[i] == hold)
-	{
 		return ((char *)s + i);
-	}
 	return (NULL);
 }

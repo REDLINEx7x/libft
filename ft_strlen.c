@@ -6,7 +6,7 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 19:06:19 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/10/30 09:57:06 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/11/12 18:14:21 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ size_t	ft_strlen(const char *s)
 {
 	size_t	i;
 
-	if (s == NULL)
-		return (0);
 	i = 0;
 	while (s[i])
 		i++;

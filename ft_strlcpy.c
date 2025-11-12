@@ -6,7 +6,7 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 22:20:20 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/11/11 09:34:32 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/11/12 18:11:37 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	while (src[src_l])
 		src_l++;
 	if (size == 0)
-	{
 		return (src_l);
-	}
 	while (src[i] && i < size - 1)
 	{
 		dst[i] = src[i];

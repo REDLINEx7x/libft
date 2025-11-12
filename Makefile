@@ -1,6 +1,8 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 NAME = libft.a
+RM = rm -rf
+AR = ar rcs
 
 SRCS = ft_isalpha.c ft_memmove.c ft_putstr_fd.c	ft_strjoin.c ft_strncmp.c \
 ft_tolower.c ft_atoi.c ft_memset.c ft_split.c ft_strlcat.c ft_strnstr.c	\
@@ -16,8 +18,6 @@ OBJS = $(SRCS:.c=.o)
 
 BOBJS = $(BONUS:.c=.o)
 
-RM = rm -rf
-AR = ar rcs
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@

@@ -6,7 +6,7 @@
 /*   By: moamhouc <moamhouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 08:25:59 by moamhouc          #+#    #+#             */
-/*   Updated: 2025/11/11 09:31:09 by moamhouc         ###   ########.fr       */
+/*   Updated: 2025/11/12 17:56:16 by moamhouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 	i = 0;
 	while (s[i])
 	{
-		f(i, &s[i]);
+		f(i, s + i);
 		i++;
 	}
 }
